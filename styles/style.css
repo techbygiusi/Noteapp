@@ -1,0 +1,420 @@
+@import url('colors.css');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+::selection {
+    background-color: var(--highlight-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    width: 100%;
+    background: var(--container-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-height: 90vh;
+}
+
+#add-script-btn {
+    background-color: var(--button-background);
+}
+
+#add-script-btn:hover {
+    background-color: var(--save-hover-background);
+    transform: scale(1.03);
+}
+
+#script-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#script-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+#script-list::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 10px;
+}
+
+#script-list::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+}
+
+#script-list::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+    border-radius: 50%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+h1 a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+li {
+    background: var(--list-item-background);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: var(--list-item-hover-background);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button-container a, 
+.button-container button, 
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    font-size: 14px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.action-button:hover {
+    background-color: var(--save-hover-background);
+}
+
+.button-container a {
+    text-align: center;
+}
+
+.button-container .download-button {
+    background-color: var(--button-background);
+}
+
+.button-container .download-button:hover {
+    background-color: var(--link-hover-color);
+    transform: scale(1.03);
+}
+
+.button-container .edit-button {
+    background-color: var(--button-background);
+}
+
+.button-container .edit-button:hover {
+    background-color: var(--link-hover-color);
+    transform: scale(1.03);
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.alert {
+    color: var(--alert-color);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-script-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.add-script-content {
+    background-color: var(--add-script-background);
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.add-script-content label,
+.add-script-content input,
+.add-script-content textarea,
+.add-script-content button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-script-content input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-script-content textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.add-script-content button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--add-script-button-background);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.add-script-content button:hover {
+    background-color: var(--add-script-button-hover-background);
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    min-width: 700px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    transform: scale(1.03);
+}
+
+button.action-button {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--edit-script-background);
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.edit-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#script-name-input {
+    display: inline-block;
+    font-size: 24px;
+    width: calc(100% - 60px);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#edit-icon, #save-icon {
+    font-size: 20px;
+    color: #000;
+}
+
+#edit-button, #save-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-container .copy-button {
+    background-color: var(--button-background);
+}
+
+.button-container .copy-button:hover {
+    background-color: var(--copy-hover-background);
+}
+
+.button-container .save-button {
+    background-color: var(--button-background);
+}
+
+.button-container .save-button:hover {
+    background-color: var(--save-hover-background);
+}
+
+.button-container .back-button {
+    background-color: var(--button-background);
+}
+
+.button-container .back-button:hover {
+    background-color: var(--link-hover-color);
+}
+
+.delete-button {
+    background-color: var(--delete-button-background);
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: var(--delete-button-hover);
+    transform: scale(1.03);
+}
+
+.message-box {
+    background-color: var(--message-background);
+    color: var(--message-color);
+    border: 1px solid var(--message-border);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+}

@@ -1,0 +1,46 @@
+:root {
+    --background-color: #f4f4f4;
+    --highlight-color: #ffafcc; 
+
+    --container-background: #fff;
+
+    --button-background: #000000;
+    --save-hover-background: #85d396;
+    --copy-hover-background: #90b9da;
+
+    --list-item-background: #e7e7e7;
+    --list-item-hover-background: #d0d0d0;
+
+    --scrollbar-track: #f4f4f4;
+    --scrollbar-thumb: #888;
+    --scrollbar-thumb-hover: #000000;
+
+    --text-color: #333;
+
+    --link-color: #333;
+    --link-hover-color: #ffafcc;
+
+    --add-script-background: #fefefe;
+    --add-script-button-background: #000000;
+    --add-script-button-hover-background: #85d396;
+
+    --edit-script-background: #fefefe;
+
+    --alert-color: #85d396;
+    
+    --delete-button-background: #000000;
+    --delete-button-hover: #c82333;
+
+    --message-color: #000000;
+    --message-background: #00000000;
+    --message-border: #00000000;
+
+    --version-color: #000000;
+
+    --help-color: #000000;
+    --help-background: #ffffff;
+
+    --help-icon-color: #ffffff;
+    --help-icon-background: #000000;
+    --help-icon-hover: #ffafcc;
+}
