@@ -5,6 +5,7 @@ body, html {
     padding: 0;
     height: 100vh;
     font-family: Arial, sans-serif;
+    color: var(--text-color);
 }
 
 body {
@@ -57,6 +58,18 @@ body {
 #add-script-btn:hover {
     background-color: var(--save-hover-background);
     transform: scale(1.03);
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--search-bar-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--search-bar-background);
+    color: var(--search-bar-color);
 }
 
 #script-list {
@@ -185,12 +198,13 @@ textarea {
     width: calc(100% - 20px);
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
     border-radius: 4px;
     font-family: Arial, sans-serif;
     font-size: 14px;
     resize: vertical;
     box-sizing: border-box;
+    background-color: var(--textarea-background);
+    color: var(--textarea-color);
 }
 
 .alert {
@@ -216,7 +230,6 @@ textarea {
 .add-script-content {
     background-color: var(--add-script-background);
     padding: 20px;
-    border: 1px solid #888;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     box-sizing: border-box;
@@ -233,15 +246,16 @@ textarea {
 
 .add-script-content input[type="text"] {
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 4px;
+    border: 1px solid var(--text-input-background);
 }
 
 .add-script-content textarea {
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    background-color: var(--textarea-background);
+    color: var(--textarea-color);
 }
 
 .add-script-content button {
@@ -262,6 +276,7 @@ textarea {
 .radio-group {
     display: flex;
     align-items: center;
+    margin-top: 30px;
 }
 
 .radio-group label {
@@ -307,8 +322,9 @@ form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: var(--textarea-background);
+    color: var(--textarea-color);
 }
 
 form textarea {
@@ -361,11 +377,14 @@ button.action-button {
     width: calc(100% - 60px);
     padding: 5px;
     border-radius: 4px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-input-background);
 }
 
 #edit-icon, #save-icon {
     font-size: 20px;
-    color: #000;
+    color: var(--edit-icon);
 }
 
 #edit-button, #save-button {
@@ -412,9 +431,54 @@ button.action-button {
 .message-box {
     background-color: var(--message-background);
     color: var(--message-color);
-    border: 1px solid var(--message-border);
     padding: 10px;
     margin: 10px 0;
     text-align: center;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .add-script-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        min-width: auto;
+        width: 100%;
+    }
+
+    textarea, input[type="text"] {
+        width: 100%;
+    }
+    
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .radio-group label {
+        margin-bottom: 10px;
+    }
+
+    button.action-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-script-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    textarea, input[type="text"] {
+        padding: 8px;
+    }
+
+    button.action-button {
+        font-size: 14px;
+        padding: 10px;
+    }
 }

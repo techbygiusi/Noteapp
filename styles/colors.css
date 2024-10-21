@@ -1,46 +1,51 @@
 :root {
-    --background-color: #f4f4f4;
-    --highlight-color: #ffafcc; 
+    --background-color: #121212;
+    --container-background: #1e1e1e;
+    --highlight-color: #a27dc9;
+    --text-color: #e0e0e0;
 
-    --container-background: #fff;
-
-    --button-background: #000000;
-    --save-hover-background: #85d396;
-    --copy-hover-background: #90b9da;
-
-    --list-item-background: #e7e7e7;
-    --list-item-hover-background: #d0d0d0;
-
-    --scrollbar-track: #f4f4f4;
-    --scrollbar-thumb: #888;
-    --scrollbar-thumb-hover: #000000;
-
-    --text-color: #333;
-
-    --link-color: #333;
-    --link-hover-color: #ffafcc;
-
-    --add-script-background: #fefefe;
-    --add-script-button-background: #000000;
-    --add-script-button-hover-background: #85d396;
-
-    --edit-script-background: #fefefe;
-
-    --alert-color: #85d396;
+    --textarea-color: #e0e0e0;
+    --textarea-background: #2a2a2a;
     
-    --delete-button-background: #000000;
-    --delete-button-hover: #c82333;
+    --button-background: #5a5a5a;
+    --button-hover-background: #7a7a7a;
+    --save-hover-background: #ccd5ae;
+    --copy-hover-background: #89c2d9;
 
-    --message-color: #000000;
-    --message-background: #00000000;
-    --message-border: #00000000;
-
-    --version-color: #000000;
-
-    --help-color: #000000;
-    --help-background: #ffffff;
-
-    --help-icon-color: #ffffff;
-    --help-icon-background: #000000;
-    --help-icon-hover: #ffafcc;
+    --edit-icon: #e0e0e0;
+    
+    --list-item-background: #2a2a2a;
+    --list-item-hover-background: #3c3c3c;
+    
+    --search-bar-background: #2a2a2a;
+    --search-bar-color: #e0e0e0;
+    --search-bar-border: #555;
+    
+    --scrollbar-track: #1e1e1e;
+    --scrollbar-thumb: #4a4a4a;
+    --scrollbar-thumb-hover: #6a6a6a;
+    
+    --link-color: #a27dc9;
+    --link-hover-color: #a27dc9;
+    
+    --text-input-background: #6a6a6a;
+    --add-script-background: #2a2a2a;
+    --add-script-button-background: #5a5a5a;
+    --add-script-button-hover-background: #ccd5ae;
+    
+    --edit-script-background: #2a2a2a;
+    
+    --alert-color: #ccd5ae;
+    
+    --delete-button-background: #ef5350;
+    --delete-button-hover: #e53935;
+    
+    --message-color: #e0e0e0;
+    --message-background: rgba(0, 0, 0, 0.7);
+    
+    --version-color: #e0e0e0;
+    
+    --github-icon-color: #ffffff;
+    --github-icon-background: #444;
+    --github-icon-hover: #a27dc9;
 }

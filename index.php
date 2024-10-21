@@ -6,12 +6,15 @@
     <title>PS by Calma Media</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/colors.css">
-    <link rel="stylesheet" href="styles/help.css">
+    <link rel="stylesheet" href="styles/github.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <img src="logo.jpg" alt="Logo" class="logo">
         <h1>by <a href="https://www.calma-media.com" target="_blank" rel="noopener noreferrer">Calma Media</a></h1>
+        <input type="text" id="search-bar" class="search-bar" placeholder="Search scripts..." onkeyup="filterScripts()">
+
         <ul id="script-list" class="sortable">
         </ul>
         <button id="add-script-btn" class="action-button">Add a new script</button>
@@ -51,31 +54,19 @@
     </div>
     </div>
 
-    <div id="help-box" class="help-box">
-        <div class="help-content">
-            <h2>Changelog</h2>
-            <div id="changelog-content">
-                <p>1.0: PS Script Release</p>
-                <p>1.1: Removal of annoying alerts</p>
-                <p>1.2: Introduction of the changelog</p>
-                <p>1.3: Introduction of the notes function</p>
-                <p>1.4: The script name can now be changed</p>
-            </div>
-        </div>
-    </div>
+    <a href="https://github.com/techbygiusi/ps-script" target="_blank" class="github-icon">
+        <i class="fa-brands fa-github"></i>
+    </a>
 
     <div class="version-display">
-        <p>Version 1.4</p>
-    </div>
-
-    <div class="help-icon" id="help-icon">
-        ?
+        <p>Version 1.5</p>
     </div>
 
     <script src="javascripts/list-scripts.js"></script>
     <script src="javascripts/copy-script.js"></script>
     <script src="javascripts/delete-script.js"></script>
     <script src="javascripts/help.js"></script>
+    <script src="javascripts/search-scripts.js"></script>
     <script>
         document.getElementById('add-script-btn').addEventListener('click', function() {
             document.getElementById('add-script-form').style.display = 'flex';

@@ -34,6 +34,7 @@ if (file_exists($scriptPath)) {
                 $notes[$scriptName] = $newNote;
                 file_put_contents($noteFile, json_encode($notes));
                 $message = "The script and note were saved successfully.";
+                $scriptNote = htmlspecialchars($newNote);
             } else {
                 $message = "Error saving script.";
             }
@@ -73,6 +74,10 @@ if (file_exists($scriptPath)) {
                     }, 1000);
                 }
             }
+
+            function updateNote() {
+                var noteContent = document.getElementById("script-note").value;
+            }
         </script>
     </head>
     <body onload="hideMessage()">
@@ -90,11 +95,10 @@ if (file_exists($scriptPath)) {
             <script src="../javascripts/edit-script-name.js"></script>
             <form method="POST">
                 <label for="script-content">Script content:</label>
-                <textarea id="script-content" name="script-content" rows="20" required><?php echo $content; ?></textarea>
+                <textarea id="script-content" name="script-content" rows="20" required onchange="updateNote()"><?php echo $content; ?></textarea>
 
                 <label for="script-note">Notes (optional):</label>
-                <textarea id="script-note" name="script-note" rows="3"><?php echo htmlspecialchars($scriptNote); ?></textarea>
-
+                <textarea id="script-note" name="script-note" rows="3" onchange="updateNote()"><?php echo htmlspecialchars($scriptNote); ?></textarea>
                 <div class="button-container">
                     <button type="button" onclick="downloadScript()" class="action-button download-button">Download</button>
                     <button type="button" onclick="copyToClipboard()" class="action-button copy-button">Copy to clipboard</button>
