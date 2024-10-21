@@ -16,5 +16,5 @@ With just a click on 'Add a New Script' ➕, you can effortlessly include new sc
 With the 'Edit' button ✏️, you can easily download, rename, and edit the script content and notes.
 
 <div align="center">
-    <img src="!https://github.com/user-attachments/assets/51c50d57-2ba5-4e26-bb81-428ef9975177" alt="Edit Script" width="100%" />
+    <img src="https://github.com/user-attachments/assets/51c50d57-2ba5-4e26-bb81-428ef9975177" alt="Edit Script" width="100%" />
 </div>
