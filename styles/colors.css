@@ -23,7 +23,7 @@
     
     --scrollbar-track: #1e1e1e;
     --scrollbar-thumb: #4a4a4a;
-    --scrollbar-thumb-hover: #6a6a6a;
+    --scrollbar-thumb-hover: #a27dc9;
     
     --link-color: #a27dc9;
     --link-hover-color: #a27dc9;
@@ -47,5 +47,6 @@
     
     --github-icon-color: #ffffff;
     --github-icon-background: #444;
+    --github-icon-background-hover: #a27dc9;
     --github-icon-hover: #a27dc9;
 }
