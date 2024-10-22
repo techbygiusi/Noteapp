@@ -96,28 +96,6 @@ body {
     background: var(--scrollbar-thumb-hover);
 }
 
-.logo {
-    width: 10%;
-    height: auto;
-    border-radius: 50%;
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: var(--text-color);
-}
-
-h1 a {
-    text-decoration: none;
-    color: var(--link-color);
-}
-
-h1 a:hover {
-    text-decoration: underline;
-    color: var(--link-hover-color);
-}
-
 ul {
     list-style-type: none;
     padding: 0;

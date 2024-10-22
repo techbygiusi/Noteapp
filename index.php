@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS by Calma Media</title>
+    <title>Noteapp</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/github.css">
@@ -11,8 +11,6 @@
 </head>
 <body>
     <div class="container">
-        <img src="logo.jpg" alt="Logo" class="logo">
-        <h1>by <a href="https://www.calma-media.com" target="_blank" rel="noopener noreferrer">Calma Media</a></h1>
         <input type="text" id="search-bar" class="search-bar" placeholder="Search scripts..." onkeyup="filterScripts()">
 
         <ul id="script-list" class="sortable">
