@@ -3,7 +3,7 @@
 Welcome to **PS-Script**! This user-friendly web application is your ultimate tool for managing and sharing scripts across all your devices. Whether you're a seasoned scripter or just getting started, PS-Script makes it easy to create, edit, and download a variety of scripts and file types with just a few clicks.
 
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/efd3d3e1-3587-4635-8712-24a03de5a220" alt="PS Script Home" width="100%" />
+    <img src="image.png" alt="PS Script Home" width="100%" />
 </div>
 
 ## 🚀 Features
